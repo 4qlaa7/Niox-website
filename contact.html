@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Niox.ai - Get in touch with our team to discuss your AI solutions needs.">
+    <title>Contact Us - Niox.ai</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-gray-900 text-white">
+    <!-- Particle Background -->
+    <div class="particle-bg" id="particles"></div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-gray-900/80 backdrop-blur-lg border-b border-gray-800">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold glow-text">Niox<span class="text-cyan-400">.AI</span></a>
+            <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+            <div id="nav-menu" class="hidden md:flex space-x-8">
+                <a href="index.html" class="hover:text-cyan-400 transition">Home</a>
+                <a href="about.html" class="hover:text-cyan-400 transition">About</a>
+                <a href="projects.html" class="hover:text-cyan-400 transition">Projects</a>
+                <a href="index.html#solutions" class="hover:text-cyan-400 transition">Solutions</a>
+                <a href="contact.html" class="hover:text-cyan-400 transition text-cyan-400">Contact</a>
+            </div>
+            <a href="contact.html" class="hidden md:block btn-glow px-6 py-2 rounded-full font-semibold text-white">Get Started</a>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-900/95 backdrop-blur-lg border-t border-gray-800">
+            <div class="container mx-auto px-6 py-4 space-y-4">
+                <a href="index.html" class="block hover:text-cyan-400 transition">Home</a>
+                <a href="about.html" class="block hover:text-cyan-400 transition">About</a>
+                <a href="projects.html" class="block hover:text-cyan-400 transition">Projects</a>
+                <a href="index.html#solutions" class="block hover:text-cyan-400 transition">Solutions</a>
+                <a href="contact.html" class="block hover:text-cyan-400 transition text-cyan-400">Contact</a>
+                <a href="contact.html" class="block btn-glow px-6 py-2 rounded-full font-semibold text-white text-center">Get Started</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Section -->
+    <section class="pt-32 pb-20 min-h-screen">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h1 class="text-5xl md:text-6xl font-bold mb-4 glow-text">Get In Touch</h1>
+                <p class="text-xl text-gray-400">We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+            </div>
+
+            <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-12">
+                <!-- Contact Form -->
+                <div class="bg-gray-800/50 p-8 rounded-2xl border border-gray-700">
+                    <h2 class="text-3xl font-bold mb-6">Send us a Message</h2>
+                    <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium mb-2">Name</label>
+                            <input type="text" id="name" name="name" required 
+                                class="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg focus:outline-none focus:border-cyan-400 transition">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium mb-2">Email</label>
+                            <input type="email" id="email" name="email" required 
+                                class="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg focus:outline-none focus:border-cyan-400 transition">
+                        </div>
+                        <div>
+                            <label for="company" class="block text-sm font-medium mb-2">Company (Optional)</label>
+                            <input type="text" id="company" name="company" 
+                                class="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg focus:outline-none focus:border-cyan-400 transition">
+                        </div>
+                        <div>
+                            <label for="subject" class="block text-sm font-medium mb-2">Subject</label>
+                            <input type="text" id="subject" name="subject" required 
+                                class="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg focus:outline-none focus:border-cyan-400 transition">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium mb-2">Message</label>
+                            <textarea id="message" name="message" rows="5" required 
+                                class="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg focus:outline-none focus:border-cyan-400 transition resize-none"></textarea>
+                        </div>
+                        <button type="submit" class="btn-glow w-full px-8 py-4 rounded-full font-semibold text-white">
+                            Send Message
+                        </button>
+                        <div id="form-message" class="hidden mt-4 p-4 rounded-lg"></div>
+                    </form>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="space-y-8">
+                    <div class="bg-gray-800/50 p-8 rounded-2xl border border-gray-700">
+                        <h3 class="text-2xl font-bold mb-6">Contact Information</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start space-x-4">
+                                <div class="text-cyan-400 text-2xl">📧</div>
+                                <div>
+                                    <h4 class="font-semibold mb-1">Email</h4>
+                                    <a href="mailto:contact@niox.ai" class="text-gray-400 hover:text-cyan-400 transition">contact@niox.ai</a>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <div class="text-cyan-400 text-2xl">📞</div>
+                                <div>
+                                    <h4 class="font-semibold mb-1">Phone</h4>
+                                    <a href="tel:+1234567890" class="text-gray-400 hover:text-cyan-400 transition">+1 (234) 567-890</a>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <div class="text-cyan-400 text-2xl">📍</div>
+                                <div>
+                                    <h4 class="font-semibold mb-1">Address</h4>
+                                    <p class="text-gray-400">123 Innovation Drive<br>Tech City, TC 12345<br>United States</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-800/50 p-8 rounded-2xl border border-gray-700">
+                        <h3 class="text-2xl font-bold mb-4">Business Hours</h3>
+                        <div class="space-y-2 text-gray-400">
+                            <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+                            <p>Saturday: 10:00 AM - 4:00 PM</p>
+                            <p>Sunday: Closed</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-800/50 p-8 rounded-2xl border border-gray-700">
+                        <h3 class="text-2xl font-bold mb-4">Follow Us</h3>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-gray-400 hover:text-cyan-400 transition text-2xl">LinkedIn</a>
+                            <a href="#" class="text-gray-400 hover:text-cyan-400 transition text-2xl">Twitter</a>
+                            <a href="#" class="text-gray-400 hover:text-cyan-400 transition text-2xl">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 border-t border-gray-800 py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-2xl font-bold glow-text mb-4">Niox<span class="text-cyan-400">.AI</span></h3>
+                    <p class="text-gray-400">Intelligence. Redefined. Building the future of AI-powered solutions.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="about.html" class="hover:text-cyan-400 transition">About Us</a></li>
+                        <li><a href="projects.html" class="hover:text-cyan-400 transition">Projects</a></li>
+                        <li><a href="index.html#solutions" class="hover:text-cyan-400 transition">Solutions</a></li>
+                        <li><a href="contact.html" class="hover:text-cyan-400 transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Resources</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-cyan-400 transition">Blog</a></li>
+                        <li><a href="#" class="hover:text-cyan-400 transition">Documentation</a></li>
+                        <li><a href="#" class="hover:text-cyan-400 transition">Case Studies</a></li>
+                        <li><a href="#" class="hover:text-cyan-400 transition">Support</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Legal</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="privacy.html" class="hover:text-cyan-400 transition">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="hover:text-cyan-400 transition">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm">© 2024 Niox.ai. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-cyan-400 transition">LinkedIn</a>
+                    <a href="#" class="text-gray-400 hover:text-cyan-400 transition">Twitter</a>
+                    <a href="#" class="text-gray-400 hover:text-cyan-400 transition">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore Niox.ai projects - Innovative AI solutions transforming industries.">
+    <title>Projects - Niox.ai</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-gray-900 text-white">
+    <!-- Particle Background -->
+    <div class="particle-bg" id="particles"></div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-gray-900/80 backdrop-blur-lg border-b border-gray-800">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold glow-text">Niox<span class="text-cyan-400">.AI</span></a>
+            <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+            <div id="nav-menu" class="hidden md:flex space-x-8">
+                <a href="index.html" class="hover:text-cyan-400 transition">Home</a>
+                <a href="about.html" class="hover:text-cyan-400 transition">About</a>
+                <a href="projects.html" class="hover:text-cyan-400 transition text-cyan-400">Projects</a>
+                <a href="index.html#solutions" class="hover:text-cyan-400 transition">Solutions</a>
+                <a href="contact.html" class="hover:text-cyan-400 transition">Contact</a>
+            </div>
+            <a href="contact.html" class="hidden md:block btn-glow px-6 py-2 rounded-full font-semibold text-white">Get Started</a>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-900/95 backdrop-blur-lg border-t border-gray-800">
+            <div class="container mx-auto px-6 py-4 space-y-4">
+                <a href="index.html" class="block hover:text-cyan-400 transition">Home</a>
+                <a href="about.html" class="block hover:text-cyan-400 transition">About</a>
+                <a href="projects.html" class="block hover:text-cyan-400 transition text-cyan-400">Projects</a>
+                <a href="index.html#solutions" class="block hover:text-cyan-400 transition">Solutions</a>
+                <a href="contact.html" class="block hover:text-cyan-400 transition">Contact</a>
+                <a href="contact.html" class="block btn-glow px-6 py-2 rounded-full font-semibold text-white text-center">Get Started</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Projects Header -->
+    <section class="pt-32 pb-20">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6 glow-text">Our Projects</h1>
+            <p class="text-xl text-gray-400 max-w-3xl mx-auto">Innovation in action. Explore our portfolio of AI-powered solutions that are transforming industries and driving business success.</p>
+        </div>
+    </section>
+
+    <!-- Projects Grid -->
+    <section class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div id="trading" class="card-hover bg-gray-800/50 p-8 rounded-2xl border border-gray-700">
+                    <div class="text-5xl mb-4">🤖</div>
+                    <h3 class="text-2xl font-bold mb-4">AI Trading Platform</h3>
+                    <p class="text-gray-400 mb-4">Advanced algorithmic trading system with real-time market analysis and predictive modeling. Features include sentiment analysis, risk management, and automated execution.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-3 py-1 bg-cyan-400/20 text-cyan-400 rounded-full text-sm">Machine Learning</span>
+                        <span class="px-3 py-1 bg-purple-400/20 text-purple-400 rounded-full text-sm">Finance</span>
+                        <span class="px-3 py-1 bg-pink-400/20 text-pink-400 rounded-full text-sm">Real-time</span>
+                    </div>
+                    <div class="text-sm text-gray-500">Client: Financial Services Corp | 2024</div>
+                </div>
+
+                <!-- Project 2 -->
+                <div id="healthcare" class="card-hover bg-gray-800/50 p-8 rounded-2xl border border-gray-700">
+                    <div class="text-5xl mb-4">🏥</div>
+                    <h3 class="text-2xl font-bold mb-4">Healthcare AI Assistant</h3>
+                    <p class="text-gray-400 mb-4">Intelligent diagnostic system helping medical professionals make faster, more accurate decisions. Includes image recognition, patient data analysis, and treatment recommendations.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-3 py-1 bg-cyan-400/20 text-cyan-400 rounded-full text-sm">Deep Learning</span>
+                        <span class="px-3 py-1 bg-green-400/20 text-green-400 rounded-full text-sm">Healthcare</span>
+                        <span class="px-3 py-1 bg-purple-400/20 text-purple-400 rounded-full text-sm">NLP</span>
+                    </div>
+                    <div class="text-sm text-gray-500">Client: MedTech Solutions | 2024</div>
+                </div>
+
+                <!-- Project 3 -->
+                <div id="fleet" class="card-hover bg-gray-800/50 p-8 rounded-2xl border border-gray-700">
+                    <div class="text-5xl mb-4">🚗</div>
+                    <h3 class="text-2xl font-bold mb-4">Autonomous Fleet Management</h3>
+                    <p class="text-gray-400 mb-4">Smart logistics solution optimizing routes and reducing operational costs by 40%. Features predictive maintenance, real-time tracking, and automated scheduling.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-3 py-1 bg-cyan-400/20 text-cyan-400 rounded-full text-sm">IoT</span>
+                        <span class="px-3 py-1 bg-yellow-400/20 text-yellow-400 rounded-full text-sm">Logistics</span>
+                        <span class="px-3 py-1 bg-pink-400/20 text-pink-400 rounded-full text-sm">Optimization</span>
+                    </div>
+                    <div class="text-sm text-gray-500">Client: Global Logistics Inc | 2023</div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="card-hover bg-gray-800/50 p-8 rounded-2xl border border-gray-700">
+                    <div class="text-5xl mb-4">🛒</div>
+                    <h3 class="text-2xl font-bold mb-4">E-commerce Personalization Engine</h3>
+                    <p class="text-gray-400 mb-4">AI-powered recommendation system increasing conversion rates by 35%. Uses collaborative filtering and deep learning to personalize shopping experiences.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-3 py-1 bg-cyan-400/20 text-cyan-400 rounded-full text-sm">Recommendation</span>
+                        <span class="px-3 py-1 bg-purple-400/20 text-purple-400 rounded-full text-sm">E-commerce</span>
+                        <span class="px-3 py-1 bg-pink-400/20 text-pink-400 rounded-full text-sm">Personalization</span>
+                    </div>
+                    <div class="text-sm text-gray-500">Client: RetailTech Solutions | 2024</div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="card-hover bg-gray-800/50 p-8 rounded-2xl border border-gray-700">
+                    <div class="text-5xl mb-4">🔒</div>
+                    <h3 class="text-2xl font-bold mb-4">Cybersecurity Threat Detection</h3>
+                    <p class="text-gray-400 mb-4">Advanced threat detection system using AI to identify and prevent security breaches in real-time. Reduces false positives by 80% and improves response time.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-3 py-1 bg-red-400/20 text-red-400 rounded-full text-sm">Security</span>
+                        <span class="px-3 py-1 bg-cyan-400/20 text-cyan-400 rounded-full text-sm">Anomaly Detection</span>
+                        <span class="px-3 py-1 bg-purple-400/20 text-purple-400 rounded-full text-sm">Real-time</span>
+                    </div>
+                    <div class="text-sm text-gray-500">Client: SecureNet Systems | 2023</div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="card-hover bg-gray-800/50 p-8 rounded-2xl border border-gray-700">
+                    <div class="text-5xl mb-4">📊</div>
+                    <h3 class="text-2xl font-bold mb-4">Business Intelligence Platform</h3>
+                    <p class="text-gray-400 mb-4">Comprehensive BI solution with natural language querying and automated insights. Transforms raw data into actionable business intelligence.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-3 py-1 bg-cyan-400/20 text-cyan-400 rounded-full text-sm">Analytics</span>
+                        <span class="px-3 py-1 bg-green-400/20 text-green-400 rounded-full text-sm">NLP</span>
+                        <span class="px-3 py-1 bg-purple-400/20 text-purple-400 rounded-full text-sm">Data Visualization</span>
+                    </div>
+                    <div class="text-sm text-gray-500">Client: Enterprise Solutions | 2024</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-32 bg-gradient-to-r from-cyan-900/20 to-purple-900/20">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-5xl font-bold mb-6 glow-text">Have a Project in Mind?</h2>
+            <p class="text-xl text-gray-400 mb-8">Let's discuss how we can bring your vision to life with AI</p>
+            <a href="contact.html" class="btn-glow px-10 py-4 rounded-full font-semibold text-white text-lg inline-block">Start Your Project</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 border-t border-gray-800 py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-2xl font-bold glow-text mb-4">Niox<span class="text-cyan-400">.AI</span></h3>
+                    <p class="text-gray-400">Intelligence. Redefined. Building the future of AI-powered solutions.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="about.html" class="hover:text-cyan-400 transition">About Us</a></li>
+                        <li><a href="projects.html" class="hover:text-cyan-400 transition">Projects</a></li>
+                        <li><a href="index.html#solutions" class="hover:text-cyan-400 transition">Solutions</a></li>
+                        <li><a href="contact.html" class="hover:text-cyan-400 transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Resources</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-cyan-400 transition">Blog</a></li>
+                        <li><a href="#" class="hover:text-cyan-400 transition">Documentation</a></li>
+                        <li><a href="#" class="hover:text-cyan-400 transition">Case Studies</a></li>
+                        <li><a href="#" class="hover:text-cyan-400 transition">Support</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Legal</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="privacy.html" class="hover:text-cyan-400 transition">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="hover:text-cyan-400 transition">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm">© 2024 Niox.ai. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-cyan-400 transition">LinkedIn</a>
+                    <a href="#" class="text-gray-400 hover:text-cyan-400 transition">Twitter</a>
+                    <a href="#" class="text-gray-400 hover:text-cyan-400 transition">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
+

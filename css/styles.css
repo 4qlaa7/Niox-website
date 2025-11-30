@@ -1,0 +1,429 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #0a0a0f;
+    color: #f3f4f6;
+    overflow-x: hidden;
+}
+
+/* AI Bot Loading Screen */
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #0a0a0f 0%, #1a0a2e 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease;
+}
+
+#loading-screen.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* AI Bot Head Animation */
+.bot-head {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    animation: float 3s ease-in-out infinite;
+}
+
+.bot-face {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #00d9ff 0%, #7c3aed 100%);
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    position: relative;
+    box-shadow: 0 0 60px rgba(0, 217, 255, 0.6), inset 0 0 30px rgba(124, 58, 237, 0.3);
+    animation: morphBot 4s ease-in-out infinite;
+}
+
+.bot-eye {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border-radius: 50%;
+    top: 45px;
+    animation: blink 3s infinite;
+}
+
+.bot-eye.left { 
+    left: 35px; 
+}
+
+.bot-eye.right { 
+    right: 35px; 
+}
+
+.bot-eye::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #00d9ff;
+    border-radius: 50%;
+    top: 5px;
+    left: 5px;
+    animation: eyeScan 2s ease-in-out infinite;
+}
+
+.bot-antenna {
+    position: absolute;
+    width: 3px;
+    height: 30px;
+    background: linear-gradient(180deg, #00d9ff, #7c3aed);
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 3px;
+}
+
+.bot-antenna::after {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: #00d9ff;
+    border-radius: 50%;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 0 20px #00d9ff;
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+.bot-mouth {
+    position: absolute;
+    width: 60px;
+    height: 3px;
+    background: #fff;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+    animation: speak 0.5s ease-in-out infinite alternate;
+}
+
+.loading-text {
+    margin-top: 40px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    background: linear-gradient(90deg, #00d9ff, #7c3aed, #ec4899, #00d9ff);
+    background-size: 300% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientFlow 3s linear infinite;
+}
+
+.loading-dots {
+    display: inline-block;
+    animation: dots 1.5s steps(4) infinite;
+}
+
+@keyframes float {
+    0%, 100% { 
+        transform: translateY(0px); 
+    }
+    50% { 
+        transform: translateY(-20px); 
+    }
+}
+
+@keyframes morphBot {
+    0%, 100% { 
+        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; 
+    }
+    50% { 
+        border-radius: 70% 30% 30% 70% / 70% 70% 30% 30%; 
+    }
+}
+
+@keyframes blink {
+    0%, 90%, 100% { 
+        transform: scaleY(1); 
+    }
+    95% { 
+        transform: scaleY(0.1); 
+    }
+}
+
+@keyframes eyeScan {
+    0%, 100% { 
+        transform: translate(0, 0); 
+    }
+    25% { 
+        transform: translate(-3px, 0); 
+    }
+    75% { 
+        transform: translate(3px, 0); 
+    }
+}
+
+@keyframes pulse {
+    0%, 100% { 
+        transform: translateX(-50%) scale(1); 
+        opacity: 1; 
+    }
+    50% { 
+        transform: translateX(-50%) scale(1.5); 
+        opacity: 0.7; 
+    }
+}
+
+@keyframes speak {
+    0% { 
+        width: 60px; 
+    }
+    100% { 
+        width: 70px; 
+    }
+}
+
+@keyframes gradientFlow {
+    0% { 
+        background-position: 0% 50%; 
+    }
+    100% { 
+        background-position: 300% 50%; 
+    }
+}
+
+@keyframes dots {
+    0% { 
+        content: ''; 
+    }
+    25% { 
+        content: '.'; 
+    }
+    50% { 
+        content: '..'; 
+    }
+    75% { 
+        content: '...'; 
+    }
+}
+
+/* 3D AI Robot Canvas */
+#robot-canvas {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+#robot-canvas.visible {
+    opacity: 1;
+}
+
+/* Enhanced Animations */
+.glow-text {
+    text-shadow: 0 0 20px rgba(0, 217, 255, 0.8), 0 0 40px rgba(124, 58, 237, 0.6);
+    animation: textGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes textGlow {
+    from { 
+        text-shadow: 0 0 20px rgba(0, 217, 255, 0.8), 0 0 40px rgba(124, 58, 237, 0.6); 
+    }
+    to { 
+        text-shadow: 0 0 30px rgba(0, 217, 255, 1), 0 0 60px rgba(124, 58, 237, 0.8); 
+    }
+}
+
+.particle-bg {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.particle {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: #00d9ff;
+    border-radius: 50%;
+    animation: particleFloat 15s infinite;
+    box-shadow: 0 0 6px #00d9ff;
+}
+
+@keyframes particleFloat {
+    0% { 
+        transform: translate(0, 0) scale(1); 
+        opacity: 0; 
+    }
+    10% { 
+        opacity: 0.5; 
+    }
+    90% { 
+        opacity: 0.5; 
+    }
+    100% { 
+        transform: translate(100px, -800px) scale(1.5); 
+        opacity: 0; 
+    }
+}
+
+/* Smooth scrolling */
+html { 
+    scroll-behavior: smooth; 
+}
+
+/* Card hover effects */
+.card-hover {
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.card-hover:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 217, 255, 0.3);
+}
+
+/* Button glow */
+.btn-glow {
+    background: linear-gradient(135deg, #00d9ff, #0066ff, #7c3aed);
+    background-size: 200% 200%;
+    animation: gradientShift 3s ease infinite;
+    box-shadow: 0 4px 20px rgba(0, 217, 255, 0.5);
+    transition: all 0.3s ease;
+}
+
+.btn-glow:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(0, 217, 255, 0.7);
+}
+
+@keyframes gradientShift {
+    0%, 100% { 
+        background-position: 0% 50%; 
+    }
+    50% { 
+        background-position: 100% 50%; 
+    }
+}
+
+/* Form Styles */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    color: #f3f4f6;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+textarea:focus {
+    color: #f3f4f6;
+}
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+input[type="tel"]::placeholder,
+textarea::placeholder {
+    color: #6b7280;
+}
+
+/* Mobile Menu */
+#mobile-menu {
+    animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Form Message Styles */
+#form-message.success {
+    background-color: rgba(16, 185, 129, 0.2);
+    border: 1px solid rgba(16, 185, 129, 0.5);
+    color: #10b981;
+}
+
+#form-message.error {
+    background-color: rgba(239, 68, 68, 0.2);
+    border: 1px solid rgba(239, 68, 68, 0.5);
+    color: #ef4444;
+}
+
+/* Smooth page transitions */
+.page-transition {
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Project tags */
+.project-tag {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+/* Footer styles */
+footer a {
+    transition: color 0.3s ease;
+}
+
+/* Loading state for forms */
+.btn-glow:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    #robot-canvas { 
+        width: 100%; 
+        height: 40%; 
+        top: auto; 
+        bottom: 0; 
+    }
+    
+    .bot-head { 
+        width: 100px; 
+        height: 100px; 
+    }
+
+    .glow-text {
+        font-size: 2.5rem;
+    }
+}
+
