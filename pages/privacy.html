@@ -6,7 +6,7 @@
     <meta name="description" content="Privacy Policy - Niox.ai">
     <title>Privacy Policy - Niox.ai</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body class="bg-gray-900 text-white">
     <!-- Particle Background -->
@@ -15,27 +15,74 @@
     <!-- Navigation -->
     <nav class="fixed top-0 w-full z-50 bg-gray-900/80 backdrop-blur-lg border-b border-gray-800">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-bold glow-text">Niox<span class="text-cyan-400">.AI</span></a>
+            <a href="../index.html" class="text-2xl font-bold glow-text">Niox<span class="text-cyan-400">.AI</span></a>
             <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                 </svg>
             </button>
-            <div id="nav-menu" class="hidden md:flex space-x-8">
-                <a href="index.html" class="hover:text-cyan-400 transition">Home</a>
+            <div id="nav-menu" class="hidden md:flex space-x-8 items-center">
+                <a href="../index.html" class="hover:text-cyan-400 transition">Home</a>
                 <a href="about.html" class="hover:text-cyan-400 transition">About</a>
                 <a href="projects.html" class="hover:text-cyan-400 transition">Projects</a>
-                <a href="index.html#solutions" class="hover:text-cyan-400 transition">Solutions</a>
+                <div class="relative group">
+                    <button class="hover:text-cyan-400 transition flex items-center">
+                        Services
+                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="absolute left-0 mt-2 w-64 bg-gray-800 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 border border-gray-700">
+                        <a href="../services/chatbots.html" class="block px-4 py-3 hover:bg-gray-700 rounded-t-lg transition">
+                            <div class="font-semibold text-cyan-400">🤖 Chatbots</div>
+                            <div class="text-sm text-gray-400">Creative chatbot samples</div>
+                        </a>
+                        <a href="../services/nlp.html" class="block px-4 py-3 hover:bg-gray-700 transition">
+                            <div class="font-semibold text-cyan-400">💬 NLP</div>
+                            <div class="text-sm text-gray-400">Natural language processing projects</div>
+                        </a>
+                        <a href="../services/ai-agents.html" class="block px-4 py-3 hover:bg-gray-700 transition">
+                            <div class="font-semibold text-cyan-400">🧠 AI Agents</div>
+                            <div class="text-sm text-gray-400">Autonomous AI workflows and copilots</div>
+                        </a>
+                        <a href="../services/computer-vision.html" class="block px-4 py-3 hover:bg-gray-700 transition">
+                            <div class="font-semibold text-cyan-400">👁️ Computer Vision</div>
+                            <div class="text-sm text-gray-400">Vision AI projects</div>
+                        </a>
+                        <a href="../services/software.html" class="block px-4 py-3 hover:bg-gray-700 transition">
+                            <div class="font-semibold text-cyan-400">💻 Software</div>
+                            <div class="text-sm text-gray-400">Websites and software projects</div>
+                        </a>
+                        <a href="../services/ecommerce.html" class="block px-4 py-3 hover:bg-gray-700 transition">
+                            <div class="font-semibold text-cyan-400">🛒 E-Commerce</div>
+                            <div class="text-sm text-gray-400">Online stores and platforms</div>
+                        </a>
+                        <a href="../services/desktop-apps.html" class="block px-4 py-3 hover:bg-gray-700 rounded-b-lg transition">
+                            <div class="font-semibold text-cyan-400">🖥️ Desktop Applications</div>
+                            <div class="text-sm text-gray-400">Desktop apps and shop systems</div>
+                        </a>
+                    </div>
+                </div>
+                <a href="blog.html" class="hover:text-cyan-400 transition">Blog</a>
+                <a href="../index.html#solutions" class="hover:text-cyan-400 transition">Solutions</a>
                 <a href="contact.html" class="hover:text-cyan-400 transition">Contact</a>
             </div>
             <a href="contact.html" class="hidden md:block btn-glow px-6 py-2 rounded-full font-semibold text-white">Get Started</a>
         </div>
         <div id="mobile-menu" class="hidden md:hidden bg-gray-900/95 backdrop-blur-lg border-t border-gray-800">
             <div class="container mx-auto px-6 py-4 space-y-4">
-                <a href="index.html" class="block hover:text-cyan-400 transition">Home</a>
+                <a href="../index.html" class="block hover:text-cyan-400 transition">Home</a>
                 <a href="about.html" class="block hover:text-cyan-400 transition">About</a>
                 <a href="projects.html" class="block hover:text-cyan-400 transition">Projects</a>
-                <a href="index.html#solutions" class="block hover:text-cyan-400 transition">Solutions</a>
+                <a href="../services/chatbots.html" class="block hover:text-cyan-400 transition">Chatbots</a>
+                <a href="../services/nlp.html" class="block hover:text-cyan-400 transition">NLP</a>
+                <a href="../services/ai-agents.html" class="block hover:text-cyan-400 transition">AI Agents</a>
+                <a href="../services/computer-vision.html" class="block hover:text-cyan-400 transition">Computer Vision</a>
+                <a href="../services/software.html" class="block hover:text-cyan-400 transition">Software</a>
+                <a href="../services/ecommerce.html" class="block hover:text-cyan-400 transition">E-Commerce</a>
+                <a href="../services/desktop-apps.html" class="block hover:text-cyan-400 transition">Desktop Apps</a>
+                <a href="blog.html" class="block hover:text-cyan-400 transition">Blog</a>
+                <a href="../index.html#solutions" class="block hover:text-cyan-400 transition">Solutions</a>
                 <a href="contact.html" class="block hover:text-cyan-400 transition">Contact</a>
                 <a href="contact.html" class="block btn-glow px-6 py-2 rounded-full font-semibold text-white text-center">Get Started</a>
             </div>
@@ -183,7 +230,7 @@
                     <ul class="space-y-2 text-gray-400">
                         <li><a href="about.html" class="hover:text-cyan-400 transition">About Us</a></li>
                         <li><a href="projects.html" class="hover:text-cyan-400 transition">Projects</a></li>
-                        <li><a href="index.html#solutions" class="hover:text-cyan-400 transition">Solutions</a></li>
+                        <li><a href="../index.html#solutions" class="hover:text-cyan-400 transition">Solutions</a></li>
                         <li><a href="contact.html" class="hover:text-cyan-400 transition">Contact</a></li>
                     </ul>
                 </div>
@@ -215,7 +262,7 @@
         </div>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script type="module" src="../js/app.js"></script>
 </body>
 </html>
 

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Niox.ai AI Agents - Autonomous multi-step agents that orchestrate tools, data, and workflows.">
+    <title>AI Agents - Niox.ai Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../../css/styles.css">
+</head>
+<body class="bg-gray-900 text-white">
+    <div class="particle-bg" id="particles"></div>
+
+    <nav class="fixed top-0 w-full z-50 bg-gray-900/80 backdrop-blur-lg border-b border-gray-800">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="../../index.html" class="text-2xl font-bold glow-text">Niox<span class="text-cyan-400">.AI</span></a>
+            <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+            <div id="nav-menu" class="hidden md:flex space-x-8 items-center">
+                <a href="../../index.html" class="hover:text-cyan-400 transition">Home</a>
+                <a href="../about.html" class="hover:text-cyan-400 transition">About</a>
+                <a href="../projects.html" class="hover:text-cyan-400 transition">Projects</a>
+                <div class="relative group">
+                    <button class="hover:text-cyan-400 transition flex items-center">
+                        Services
+                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="absolute left-0 mt-2 w-64 bg-gray-800 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 border border-gray-700">
+                        <a href="../services/chatbots.html" class="block px-4 py-3 hover:bg-gray-700 rounded-t-lg transition">
+                            <div class="font-semibold text-cyan-400">🤖 Chatbots</div>
+                            <div class="text-sm text-gray-400">Creative chatbot samples</div>
+                        </a>
+                        <a href="../services/nlp.html" class="block px-4 py-3 hover:bg-gray-700 transition">
+                            <div class="font-semibold text-cyan-400">💬 NLP</div>
+                            <div class="text-sm text-gray-400">Natural language processing projects</div>
+                        </a>
+                        <a href="../services/ai-agents.html" class="block px-4 py-3 hover:bg-gray-700 transition">
+                            <div class="font-semibold text-cyan-400">🧠 AI Agents</div>
+                            <div class="text-sm text-gray-400">Autonomous AI workflows and copilots</div>
+                        </a>
+                        <a href="../services/computer-vision.html" class="block px-4 py-3 hover:bg-gray-700 transition">
+                            <div class="font-semibold text-cyan-400">👁️ Computer Vision</div>
+                            <div class="text-sm text-gray-400">Vision AI projects</div>
+                        </a>
+                        <a href="../services/software.html" class="block px-4 py-3 hover:bg-gray-700 transition">
+                            <div class="font-semibold text-cyan-400">💻 Software</div>
+                            <div class="text-sm text-gray-400">Websites and software projects</div>
+                        </a>
+                        <a href="../services/ecommerce.html" class="block px-4 py-3 hover:bg-gray-700 transition">
+                            <div class="font-semibold text-cyan-400">🛒 E-Commerce</div>
+                            <div class="text-sm text-gray-400">Online stores and platforms</div>
+                        </a>
+                        <a href="../services/desktop-apps.html" class="block px-4 py-3 hover:bg-gray-700 rounded-b-lg transition">
+                            <div class="font-semibold text-cyan-400">🖥️ Desktop Applications</div>
+                            <div class="text-sm text-gray-400">Desktop apps and shop systems</div>
+                        </a>
+                    </div>
+                </div>
+                <a href="../blog.html" class="hover:text-cyan-400 transition">Blog</a>
+                <a href="../../index.html#solutions" class="hover:text-cyan-400 transition">Solutions</a>
+                <a href="../contact.html" class="hover:text-cyan-400 transition">Contact</a>
+            </div>
+            <a href="../contact.html" class="hidden md:block btn-glow px-6 py-2 rounded-full font-semibold text-white">Get Started</a>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-900/95 backdrop-blur-lg border-t border-gray-800">
+            <div class="container mx-auto px-6 py-4 space-y-4">
+                <a href="../../index.html" class="block hover:text-cyan-400 transition">Home</a>
+                <a href="../about.html" class="block hover:text-cyan-400 transition">About</a>
+                <a href="../projects.html" class="block hover:text-cyan-400 transition">Projects</a>
+                <a href="../services/chatbots.html" class="block hover:text-cyan-400 transition">Chatbots</a>
+                <a href="../services/nlp.html" class="block hover:text-cyan-400 transition">NLP</a>
+                <a href="../services/ai-agents.html" class="block hover:text-cyan-400 transition">AI Agents</a>
+                <a href="../services/computer-vision.html" class="block hover:text-cyan-400 transition">Computer Vision</a>
+                <a href="../services/software.html" class="block hover:text-cyan-400 transition">Software</a>
+                <a href="../services/ecommerce.html" class="block hover:text-cyan-400 transition">E-Commerce</a>
+                <a href="../services/desktop-apps.html" class="block hover:text-cyan-400 transition">Desktop Apps</a>
+                <a href="../blog.html" class="block hover:text-cyan-400 transition">Blog</a>
+                <a href="../../index.html#solutions" class="block hover:text-cyan-400 transition">Solutions</a>
+                <a href="../contact.html" class="block hover:text-cyan-400 transition">Contact</a>
+                <a href="../contact.html" class="block btn-glow px-6 py-2 rounded-full font-semibold text-white text-center">Get Started</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="pt-32 pb-12">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-5xl md:text-6xl font-bold mb-4 glow-text">AI Copilots & Autonomous Teams</h1>
+            <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+                Persistent AI copilots that own workflows end‑to‑end — planning, executing, and escalating with human‑grade judgment.
+            </p>
+        </div>
+    </section>
+
+    <section class="pb-24">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card-hover bg-gray-800/50 p-8 rounded-2xl border border-gray-700">
+                    <div class="text-4xl mb-4">📈</div>
+                    <h3 class="text-2xl font-bold mb-3">Pipeline Growth Copilot</h3>
+                    <p class="text-gray-400 mb-4">
+                        A revenue copilot that cleans CRM data, enriches accounts, and auto‑prioritizes outreach with daily playbooks for reps.
+                    </p>
+                    <div class="flex flex-wrap gap-2 text-sm">
+                        <span class="project-tag bg-emerald-400/10 text-emerald-400 border border-emerald-500/40">RevOps</span>
+                        <span class="project-tag bg-cyan-400/10 text-cyan-400 border border-cyan-500/40">Salesforce / HubSpot</span>
+                    </div>
+                </div>
+
+                <div class="card-hover bg-gray-800/50 p-8 rounded-2xl border border-gray-700">
+                    <div class="text-4xl mb-4">🧪</div>
+                    <h3 class="text-2xl font-bold mb-3">Autonomous Experiment Scientist</h3>
+                    <p class="text-gray-400 mb-4">
+                        Designs, launches, and evaluates product experiments — wiring analytics, reading dashboards, and drafting rollout briefs.
+                    </p>
+                    <div class="flex flex-wrap gap-2 text-sm">
+                        <span class="project-tag bg-purple-400/10 text-purple-400 border border-purple-500/40">Product</span>
+                        <span class="project-tag bg-amber-400/10 text-amber-400 border border-amber-500/40">A/B Testing</span>
+                    </div>
+                </div>
+
+                <div class="card-hover bg-gray-800/50 p-8 rounded-2xl border border-gray-700">
+                    <div class="text-4xl mb-4">🛡️</div>
+                    <h3 class="text-2xl font-bold mb-3">SOC Analyst Sidekick</h3>
+                    <p class="text-gray-400 mb-4">
+                        Reads SIEM alerts, correlates signals, and assembles step‑by‑step incident playbooks ready for one‑click execution.
+                    </p>
+                    <div class="flex flex-wrap gap-2 text-sm">
+                        <span class="project-tag bg-red-400/10 text-red-400 border border-red-500/40">Security</span>
+                        <span class="project-tag bg-cyan-400/10 text-cyan-400 border border-cyan-500/40">Triage</span>
+                    </div>
+                </div>
+
+                <div class="card-hover bg-gray-800/50 p-8 rounded-2xl border border-gray-700">
+                    <div class="text-4xl mb-4">🔄</div>
+                    <h3 class="text-2xl font-bold mb-3">Data Pipeline Guardian</h3>
+                    <p class="text-gray-400 mb-4">
+                        Monitors ETL jobs, auto‑retries failures, files tickets with root‑cause context, and keeps stakeholders updated in Slack.
+                    </p>
+                    <div class="flex flex-wrap gap-2 text-sm">
+                        <span class="project-tag bg-sky-400/10 text-sky-400 border border-sky-500/40">Data</span>
+                        <span class="project-tag bg-lime-400/10 text-lime-400 border border-lime-500/40">Reliability</span>
+                    </div>
+                </div>
+
+                <div class="card-hover bg-gray-800/50 p-8 rounded-2xl border border-gray-700">
+                    <div class="text-4xl mb-4">📦</div>
+                    <h3 class="text-2xl font-bold mb-3">Autonomous Inventory Planner</h3>
+                    <p class="text-gray-400 mb-4">
+                        Forecasts demand, rebalances stock across locations, and drafts purchas
+                        e orders for human approval — on a rolling basis.
+                    </p>
+                    <div class="flex flex-wrap gap-2 text-sm">
+                        <span class="project-tag bg-yellow-400/10 text-yellow-400 border border-yellow-500/40">Supply Chain</span>
+                        <span class="project-tag bg-cyan-400/10 text-cyan-400 border border-cyan-500/40">Forecasting</span>
+                    </div>
+                </div>
+
+                <div class="card-hover bg-gray-800/50 p-8 rounded-2xl border border-gray-700">
+                    <div class="text-4xl mb-4">🧩</div>
+                    <h3 class="text-2xl font-bold mb-3">Integration Reliability Crew</h3>
+                    <p class="text-gray-400 mb-4">
+                        A swarm of agents that keep SaaS integrations in sync — healing webhooks, replaying failed events, and updating status pages.
+                    </p>
+                    <div class="flex flex-wrap gap-2 text-sm">
+                        <span class="project-tag bg-teal-400/10 text-teal-400 border border-teal-500/40">Integrations</span>
+                        <span class="project-tag bg-purple-400/10 text-purple-400 border border-purple-500/40">Workflows</span>
+                    </div>
+                </div>
+
+                <div class="card-hover bg-gray-800/50 p-8 rounded-2xl border border-gray-700">
+                    <div class="text-4xl mb-4">🧾</div>
+                    <h3 class="text-2xl font-bold mb-3">Always‑Ready Audit Squad</h3>
+                    <p class="text-gray-400 mb-4">
+                        Continuously collects evidence, reconciles controls, and keeps SOC2/ISO audit workspaces ready months before deadlines.
+                    </p>
+                    <div class="flex flex-wrap gap-2 text-sm">
+                        <span class="project-tag bg-indigo-400/10 text-indigo-400 border border-indigo-500/40">Compliance</span>
+                        <span class="project-tag bg-cyan-400/10 text-cyan-400 border border-cyan-500/40">Automation</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pb-32">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold mb-4 glow-text">Turn busywork into autonomous workflows</h2>
+            <p class="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
+                We design AI copilots and agent teams that plug into your tools, respect your guardrails, and deliver measurable business lift.
+            </p>
+            <a href="../contact.html" class="btn-glow px-10 py-4 rounded-full font-semibold text-white text-lg inline-block">
+                Architect Your AI Agent
+            </a>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 border-t border-gray-800 py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-2xl font-bold glow-text mb-4">Niox<span class="text-cyan-400">.AI</span></h3>
+                    <p class="text-gray-400">Intelligence. Redefined. Building the future of AI-powered solutions.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="../about.html" class="hover:text-cyan-400 transition">About Us</a></li>
+                        <li><a href="../projects.html" class="hover:text-cyan-400 transition">Projects</a></li>
+                        <li><a href="../../index.html#solutions" class="hover:text-cyan-400 transition">Solutions</a></li>
+                        <li><a href="../contact.html" class="hover:text-cyan-400 transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Resources</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-cyan-400 transition">Blog</a></li>
+                        <li><a href="#" class="hover:text-cyan-400 transition">Documentation</a></li>
+                        <li><a href="#" class="hover:text-cyan-400 transition">Case Studies</a></li>
+                        <li><a href="#" class="hover:text-cyan-400 transition">Support</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Legal</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="../privacy.html" class="hover:text-cyan-400 transition">Privacy Policy</a></li>
+                        <li><a href="../terms.html" class="hover:text-cyan-400 transition">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm">© 2024 Niox.ai. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-cyan-400 transition">LinkedIn</a>
+                    <a href="#" class="text-gray-400 hover:text-cyan-400 transition">Twitter</a>
+                    <a href="#" class="text-gray-400 hover:text-cyan-400 transition">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="../../js/app.js"></script>
+</body>
+</html>
+
+
